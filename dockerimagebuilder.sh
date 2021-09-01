@@ -1,1 +1,1 @@
-docker build -t M20AIE329 .
+sudo docker build -t m20aie329 .

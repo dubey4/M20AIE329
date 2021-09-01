@@ -1,1 +1,1 @@
-docker run --name M20AIE329 -p 8080:8081 -d M20AIE329
+sudo docker run --name m20aie329 -p 8080:8080 -d m20aie329
