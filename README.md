@@ -47,7 +47,7 @@ it will build docker image .it keep the command for image building.
 
 6)Since docker container can not serve jsp file with embedded Tomcat(we should go with Theamleaf) so I have create a api for testing from docker
 
-http://<docker-server-ip>:8080/test
+http://docker-server-ip:8080/test
 
 it will give below resopnse
 
