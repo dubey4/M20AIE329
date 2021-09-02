@@ -1,5 +1,5 @@
 # M20AIE329
-
+NOTE: Read this file fully before start testing
 ###Install Docker on Ubuntu##########################################3
 We need to run following commands for docker installation
 
@@ -21,7 +21,7 @@ Follow the following steps
 1)Download application from GIT hub using following URL
 https://github.com/dubey4/M20AIE329
 click on code button download zip
-2)Unzip the application
+2)Unzip the application(refer line 88 and 89)
 3)We can do maven setup and run mvn clean install but for simplicity I have uploaded the
 jar in base folder.
 4)For running jar we van use below command(JRE should be installed if not installed )
@@ -45,7 +45,7 @@ it will build docker image .it keep the command for image building.
 
 5)Run the dockerimagerunner.sh it will run the docker image.
 
-6)Since docker container can not serve jsp file with embedded tomacat(we should go with theamleaf) so I have create a api for testing from docker
+6)Since docker container can not serve jsp file with embedded Tomcat(we should go with Theamleaf) so I have create a api for testing from docker
 
 http://<docker-server-ip>:8080/test
 
@@ -77,6 +77,10 @@ it will give below resopnse
   }
 ]
 
+7)For web application we can use following repository on same Github with read me file
+
+https://github.com/dubey4/m20aie329web
+
 ##################################################################################################
 
 ########################For testing steps#########################################################
@@ -84,15 +88,18 @@ I have created a folder and done these steps some commands may be useful for rea
 
 sudo mkdir cars
 sudo mv Downloads/M20AIE329-main.zip /home/vivek/cars/
-sudo mv Downloads/M20AIE329-main.zip /home/vivek/cars/
 sudo apt-get install unzip
 sudo unzip M20AIE329-main.zip
 sudo chmod -R 777 M20AIE329-main
 
-sudo docker run --name m20aie329 -p 8080:8080 -d m20aie329
+./dockerimagebuilder.sh
+./dockerimagerunner.sh
 
+--for checking ip address
 sudo apt install net-tools
+ifconfig
 
+---for docker log
 sudo docker logs 6562fcb820b4
 
 
